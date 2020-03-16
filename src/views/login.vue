@@ -1,21 +1,19 @@
 <template>
-  <div class="home">
-    <!--<img alt="Vue logo" src="../assets/logo.png">-->
-    <!--<HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
+  <div class="about">
+    <h1>登录页用饿了么实现</h1>
+    <el-input v-model="inputValue"></el-input>
   </div>
 </template>
-
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-// import Vue from 'vue'
 
 @Component({
-  name: 'home',
+  name: 'login',
   components: {
   }
 })
 
 export default class extends Vue {
-
+    private inputValue:number = 123
 }
 </script>

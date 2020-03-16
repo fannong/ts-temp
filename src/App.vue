@@ -1,13 +1,32 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <!--<div id="nav">-->
+      <!--<router-link to="/">Home</router-link> |-->
+      <!--<router-link to="/about">{{name}}</router-link>-->
+    <!--</div>-->
     <router-view/>
   </div>
 </template>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
 
+// 类装饰器
+@Component({
+  name: 'app',
+  components: {
+
+  }
+})
+
+export default class App extends Vue {
+  private created () {
+    console.log('app created')
+  }
+  private name:string = '123123123133123' // 声明响应式属性
+  private numb:number = 123 // 声明响应式属性
+}
+
+</script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
