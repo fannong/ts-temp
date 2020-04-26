@@ -2,6 +2,7 @@
   <div class="home">
     <dash-board
       :prop-b="1"
+      :prop-c='2'
       @buttonclick="handleButtonClick"
       @change-event-name="handleButtonReset"
       prop-a="dashboard页">
@@ -23,10 +24,12 @@ import DashBoard from './dashboard/index.vue'
 })
 
 export default class extends Vue {
-  private handleButtonClick (e) {
-    console.log('home', e)
+  private handleButtonClick (e:any) {
+    enum Color {Red, Green, Blue}
+    let c = Color.Blue
+    console.log(c)
   }
-  handleButtonReset (e) {
+  handleButtonReset (e:any):void {
     console.log('handleButtonReset', e)
   }
 }
